@@ -1,62 +1,119 @@
 <!DOCTYPE html>
 
 <html>
-
-	<head>
-		<title>Cards CSS</title>
-		<meta charset="utf-8">
-		<style>
-			/* To come */
-			img {
-				max-width: 100%;
-			}
-			html, body {
-				height: 100vh;
-			}
-			body {
-				margin: 0;
-                font-family: cursive;
-                font-size: 2em;
-                letter-spacing: 0.05em;
-			}
-			section {
-				height: 100vh;
-				background: black;
-                /*
+  <head>
+    <title>Cards CSS</title>
+    <meta charset="utf-8" />
+    <style>
+      /* To come */
+      img {
+        max-width: 100%;
+      }
+      html,
+      body {
+        height: 100vh;
+      }
+      body {
+        margin: 0;
+        font-size: 2em;
+      }
+      section {
+        height: 100vh;
+        background: black;
+        /*
                    vertical centering with flexbox:
                    https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
                 */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-			}
-			.card {
-				width: 450px;
-				height: 300px;
-				background: white;
-				border-radius: 8px;
-				text-align: center;
-                /*
-                   vertical centering with flexbox:
-                   https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
-                */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-			}
-		</style>
-	</head>
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        width: 450px;
+        height: 300px;
+        background: white;
+        border-radius: 8px;
+        text-align: center;
+        font-family: "Georgia";
+        letter-spacing: 0.01em;
+        /*
+                vertical centering with flexbox:
+                https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+             */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .logo {
+        width: 220px;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        z-index: 1;
+        mix-blend-mode: multiply;
+      }
+      .name {
+        z-index: 2;
+      }
+      .title {
+        font-size: 12px;
+        text-align: left;
+        position: absolute;
+        top: 190px;
+        left: 110px;
+        z-index: 3;
+      }
+      .line {
+        background: yellow;
+        height: 100%;
+        width: 6px;
+        position: absolute;
+        left: 75px;
+        z-index: 0;
+      }
+      .line-two {
+        background: yellow;
+        opacity: 0.25;
+        height: 12px;
+        position: absolute;
+        bottom: 42px;
+        z-index: 2;
+        left: 0;
+        right: 0;
+      }
+      #two {
+        background: blue;
+      }
+      #two .card {
+        font-family: cursive;
+      }
+    </style>
+  </head>
 
-	<body>
+  <body>
+    <section id="one">
+      <div class="card">
+        <div class="name">Laurel Schwulst</div>
+        <div class="logo">
+          <img src="images/ultralight-logo.png" />
+        </div>
+        <div class="title">
+          <i>Professor</i><br />
+          Princeton University<br /><br />
+          Spring 2024<br />
+          Graphic Design: Ultralight<br />
+          Tuesdays, Room 206
+        </div>
+        <div class="line"></div>
+        <!-- <div class="line-two"></div> -->
+      </div>
+    </section>
 
-		<section>
-		
-			<div class="card">
-				Laurel Schwulst
-			</div>
-
-		</section>
-
-	</body>
-
+    <section id="two">
+      <div class="card">
+        <div class="name">Laurel Schwulst</div>
+      </div>
+    </section>
+  </body>
 </html>

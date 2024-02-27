@@ -15,9 +15,52 @@ a {
 	color: black;
 }
 
-.reading {
+body {
+	padding: 5em;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  	grid-gap: 35px;
+  	margin-top: 5em;
+}
+
+.small {
+	max-width: 200px;
+}
+
+.medium {
 	max-width: 300px;
+}
+
+.large {
+	max-width: 400px;
+}
+
+.nav-container {
+	text-align: center;
+}
+
+nav {
+	padding: 1em;
+	border: 1px solid black;
+	border-radius: 50px;
+	font-size: 2em;
+	margin-bottom: 1em;
+	position: fixed;
+	left: 1em;
+	right: 1em;
+	top: 1em;
+	background: #fffff2;
+}
+
+nav a {
 	display: inline-block;
-	vertical-align: top;
-	margin: 1em;
+	margin: 0.25em;
+	text-decoration: none;
+}
+
+a.current {
+	font-weight: bold;
 }

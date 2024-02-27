@@ -1,0 +1,23 @@
+body {
+	background-color: #fffff2;
+	margin: 2em;
+	font-family: 'SF Pro Display','-apple-system','BlinkMacSystemFont','San Francisco','Helvetica Neue','Helvetica','Ubuntu','Roboto','Noto','Segoe UI','Arial',sans-serif;
+    text-transform: lowercase;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: black;
+}
+
+.reading {
+	max-width: 300px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 1em;
+}
